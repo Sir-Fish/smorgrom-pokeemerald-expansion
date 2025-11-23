@@ -135,7 +135,7 @@
 #define FLAG_RECEIVED_METEORITE              0x73
 #define FLAG_ADVENTURE_STARTED               0x74 // RECEIVED Pokédex.
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
-#define FLAG_MET_HIDDEN_POWER_GIVER          0x76
+#define FLAG_MET_HIDDEN_POWER_GIVER          0x76 // Unused Flag. Removed by cheese in TM updates.
 
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE    0x77
 
@@ -186,7 +186,7 @@
 #define FLAG_TOUGH_PAINTING_MADE             0xA4
 #define FLAG_RECEIVED_TM_ROCK_TOMB           0xA5
 #define FLAG_RECEIVED_TM_BULK_UP             0xA6
-#define FLAG_RECEIVED_TM_SHOCK_WAVE          0xA7
+#define FLAG_RECEIVED_TM_AIR_SLASH           0xA7
 #define FLAG_RECEIVED_TM_OVERHEAT            0xA8
 #define FLAG_RECEIVED_TM_FACADE              0xA9
 #define FLAG_RECEIVED_TM_AERIAL_ACE          0xAA
@@ -250,7 +250,7 @@
 #define FLAG_RECEIVED_STARTER_DOLL           0xE2
 #define FLAG_RECEIVED_GOOD_ROD               0xE3
 #define FLAG_REGI_DOORS_OPENED               0xE4
-#define FLAG_RECEIVED_TM_RETURN              0xE5
+#define FLAG_RECEIVED_TM_CHARM               0xE5
 #define FLAG_RECEIVED_TM_SLUDGE_BOMB         0xE6
 #define FLAG_RECEIVED_TM_ROAR                0xE7
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
@@ -283,12 +283,12 @@
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_RECEIVED_TM_SNATCH              0x104
+#define FLAG_RECEIVED_TM_ALLURING_VOICE      0x104
 #define FLAG_RECEIVED_TM_DIG                 0x105
 #define FLAG_RECEIVED_TM_BULLET_SEED         0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107
-#define FLAG_RECEIVED_TM_HIDDEN_POWER        0x108
-#define FLAG_RECEIVED_TM_TORMENT             0x109
+#define FLAG_RECEIVED_TM_ECHOED_VOICE        0x108
+#define FLAG_RECEIVED_TM_DRAGON_TAIL         0x109
 #define FLAG_RECEIVED_LAVARIDGE_EGG          0x10A
 #define FLAG_RECEIVED_REVIVED_FOSSIL_MON     0x10B
 #define FLAG_SECRET_BASE_REGISTRY_ENABLED    0x10C
@@ -999,7 +999,7 @@
 #define FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN                        0x3B4
 #define FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE              0x3B5
 #define FLAG_HIDE_SS_TIDAL_CORRIDOR_MR_BRINEY                       0x3B6
-#define FLAG_HIDE_SS_TIDAL_ROOMS_SNATCH_GIVER                       0x3B7
+#define FLAG_HIDE_SS_TIDAL_ROOMS_ALLURING_VOICE_GIVER               0x3B7
 #define FLAG_RECEIVED_SHOAL_SALT_1                                  0x3B8
 #define FLAG_RECEIVED_SHOAL_SALT_2                                  0x3B9
 #define FLAG_RECEIVED_SHOAL_SALT_3                                  0x3BA
@@ -1067,7 +1067,7 @@
 #define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6
 #define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7
 #define FLAG_ITEM_ROUTE_115_SUPER_POTION                            0x3F8
-#define FLAG_ITEM_ROUTE_115_TM_FOCUS_PUNCH                          0x3F9
+#define FLAG_ITEM_ROUTE_115_TM_WORK_UP                              0x3F9
 #define FLAG_ITEM_ROUTE_115_IRON                                    0x3FA
 #define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
 #define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC
@@ -1124,7 +1124,7 @@
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_MAX_ELIXIR                       0x42F
 #define FLAG_ITEM_AQUA_HIDEOUT_B2F_NEST_BALL                        0x430
 #define FLAG_ITEM_MT_PYRE_EXTERIOR_MAX_POTION                       0x431
-#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_SKILL_SWAP                    0x432
+#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_IMPRISON                      0x432
 #define FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL                           0x433
 #define FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE                          0x434
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_6_LUXURY_BALL    0x435
@@ -1162,7 +1162,7 @@
 #define FLAG_ITEM_ROUTE_123_ELIXIR                                  0x455
 #define FLAG_ITEM_NEW_MAUVILLE_THUNDER_STONE                        0x456
 #define FLAG_ITEM_FIERY_PATH_FIRE_STONE                             0x457
-#define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_TM_HAIL                       0x458
+#define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_TM_SNOWSCAPE                  0x458
 #define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_NEVER_MELT_ICE                0x459
 #define FLAG_ITEM_ROUTE_103_GUARD_SPEC                              0x45A
 #define FLAG_ITEM_ROUTE_104_X_ACCURACY                              0x45B

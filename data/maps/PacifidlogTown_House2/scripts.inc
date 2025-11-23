@@ -11,10 +11,10 @@ PacifidlogTown_House2_EventScript_FanClubYoungerBrother::
 	call_if_unset FLAG_MET_FANCLUB_YOUNGER_BROTHER, PacifidlogTown_House2_EventScript_FirstMonAssessment
 	setflag FLAG_MET_FANCLUB_YOUNGER_BROTHER
 	specialvar VAR_RESULT, GetLeadMonFriendshipScore
-	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, PacifidlogTown_House2_EventScript_GiveReturn
+	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, PacifidlogTown_House2_EventScript_GiveCharm
 	specialvar VAR_RESULT, GetLeadMonFriendshipScore
 	goto_if_ge VAR_RESULT, FRIENDSHIP_50_TO_99, PacifidlogTown_House2_EventScript_PutInEffort
-	goto PacifidlogTown_House2_EventScript_GiveFrustration
+	goto PacifidlogTown_House2_EventScript_GiveHelpingHand
 	end
 
 PacifidlogTown_House2_EventScript_UpdateFanClubTMFlag::
@@ -36,13 +36,13 @@ PacifidlogTown_House2_EventScript_ClearReceivedFanClubTM::
 	clearflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
 	return
 
-PacifidlogTown_House2_EventScript_GiveReturn::
+PacifidlogTown_House2_EventScript_GiveCharm::
 	msgbox PacifidlogTown_House2_Text_AdoringPokemonTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_TM_RETURN
+	giveitem ITEM_TM_CHARM
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
 	special SetPacifidlogTMReceivedDay
-	msgbox PacifidlogTown_House2_Text_ExplainReturnFrustration, MSGBOX_DEFAULT
+	msgbox PacifidlogTown_House2_Text_ExplainCharm, MSGBOX_DEFAULT
 	release
 	end
 
@@ -51,13 +51,13 @@ PacifidlogTown_House2_EventScript_PutInEffort::
 	release
 	end
 
-PacifidlogTown_House2_EventScript_GiveFrustration::
+PacifidlogTown_House2_EventScript_GiveHelpingHand::
 	msgbox PacifidlogTown_House2_Text_ViciousPokemonTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_TM_FRUSTRATION
+	giveitem ITEM_TM_HELPING_HAND
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
 	special SetPacifidlogTMReceivedDay
-	msgbox PacifidlogTown_House2_Text_ExplainReturnFrustration, MSGBOX_DEFAULT
+	msgbox PacifidlogTown_House2_Text_ExplainHelpingHand, MSGBOX_DEFAULT
 	release
 	end
 
@@ -115,14 +115,16 @@ PacifidlogTown_House2_Text_PutInSomeMoreEffort:
 
 PacifidlogTown_House2_Text_ViciousPokemonTakeThis:
 	.string "It has a vicious look to it.\p"
-	.string "A frightening POKéMON like that\n"
-	.string "deserves a TM like this.$"
+	.string "A POKéMON like that deserves a\n"
+	.string "TM like this to help it grow.$"
 
-PacifidlogTown_House2_Text_ExplainReturnFrustration:
-	.string "If a POKéMON likes you a lot, RETURN's\n"
-	.string "power is enhanced.\p"
-	.string "If it doesn't like you, FRUSTRATION's\n"
-	.string "power goes up.$"
+PacifidlogTown_House2_Text_ExplainHelpingHand:
+	.string "This move helps your allies.\n"
+	.string "become stronger.$"
+
+PacifidlogTown_House2_Text_ExplainCharm:
+	.string "This move sharply reduces the\n"
+	.string "attack of opposing POKéMON.$"
 
 PacifidlogTown_House2_Text_GetGoodTMInXDays:
 	.string "Oh, yes. In about {STR_VAR_1} or so days,\n"

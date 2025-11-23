@@ -194,20 +194,20 @@ SlateportCity_BattleTentLobby_Movement_UnusedEnterDoor::
 	set_invisible
 	step_end
 
-SlateportCity_BattleTentLobby_EventScript_TormentGiver::
+SlateportCity_BattleTentLobby_EventScript_DragonTailGiver::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_TORMENT, SlateportCity_BattleTentLobby_EventScript_ReceivedTorment
+	goto_if_set FLAG_RECEIVED_TM_DRAGON_TAIL, SlateportCity_BattleTentLobby_EventScript_ReceivedDragonTail
 	msgbox SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe, MSGBOX_DEFAULT
-	giveitem ITEM_TM_TORMENT
+	giveitem ITEM_TM_DRAGON_TAIL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_TORMENT
-	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_DRAGON_TAIL
+	msgbox SlateportCity_BattleTentLobby_Text_ExplainDragonTail, MSGBOX_DEFAULT
 	release
 	end
 
-SlateportCity_BattleTentLobby_EventScript_ReceivedTorment::
-	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
+SlateportCity_BattleTentLobby_EventScript_ReceivedDragonTail::
+	msgbox SlateportCity_BattleTentLobby_Text_ExplainDragonTail, MSGBOX_DEFAULT
 	release
 	end
 
@@ -282,11 +282,11 @@ SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
 	.string "Hey, like, you! Zip it, you know?\n"
 	.string "Just, you know, take this!$"
 
-SlateportCity_BattleTentLobby_Text_ExplainTorment:
+SlateportCity_BattleTentLobby_Text_ExplainDragonTail:
 	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
-	.string "Like, it won't let the other guy\n"
-	.string "use the same move twice in a row, see?\p"
+	.string "Hey, it's DRAGON TAIL, you hearing me?\p"
+	.string "Like, it will make the other guy\n"
+	.string "switch out of the battle, see?\p"
 	.string "Hey, now, you listen here, like,\n"
 	.string "I'm not laying a torment on you!$"
 
