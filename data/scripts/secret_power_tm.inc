@@ -4,7 +4,8 @@ Route111_Text_MakingRoomUseTMToMakeYourOwn:
 	.string "I'm thinking about making my own room\n"
 	.string "here using a POKéMON move.\p"
 	.string "I know! I'll give you this TM.\n"
-	.string "Will you use it to make your own room?$"
+	.string "It has nothing to do with what\n"
+	.string "I'm talking about though.$"
 
 Route111_Text_ExplainSecretPower:
 	.string "Find a big tree that looks like it might\n"
@@ -43,7 +44,7 @@ Route111_EventScript_SecretPowerMan::
 	end
 
 Route111_EventScript_GiveSecretPower::
-	giveitem ITEM_TM_SECRET_POWER
+	giveitem ITEM_TM_LIQUIDATION
 	goto_if_eq VAR_RESULT, FALSE, Route111_EventScript_NoRoomForSecretPower
 	msgbox Route111_Text_ExplainSecretPower, MSGBOX_DEFAULT
 	closemessage
