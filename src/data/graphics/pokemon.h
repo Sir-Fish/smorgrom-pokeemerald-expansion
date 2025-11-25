@@ -26736,23 +26736,23 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
 
-    //const u32 gMonFrontPic_Puckling[] = INCBIN_U32("graphics/pokemon/puckling/anim_front.4bpp.smol");
-    //const u32 gMonBackPic_Puckling[] = INCBIN_U32("graphics/pokemon/puckling/back.4bpp.smol");
-    //const u16 gMonPalette_Puckling[] = INCBIN_U16("graphics/pokemon/puckling/normal.pal");
+    const u32 gMonFrontPic_Puckling[] = INCBIN_U32("graphics/pokemon/puckling/front.4bpp.smol");
+    const u32 gMonBackPic_Puckling[] = INCBIN_U32("graphics/pokemon/puckling/back.4bpp.smol");
+    const u16 gMonPalette_Puckling[] = INCBIN_U16("graphics/pokemon/puckling/normal.gbapal");
     //const u16 gMonShinyPalette_Puckling[] = INCBIN_U16("graphics/pokemon/puckling/shiny.pal");
     //const u8 gMonIcon_Puckling[] = INCBIN_U8("graphics/pokemon/puckling/icon.4bpp");
     //const u8 gMonFootprint_Puckling[] = INCBIN_U8("graphics/pokemon/puckling/footprint.1bpp");
 
-    //const u32 gMonFrontPic_Wingblown[] = INCBIN_U32("graphics/pokemon/wingblown/front.4bpp.smol");
-    //const u32 gMonBackPic_Wingblown[] = INCBIN_U32("graphics/pokemon/wingblown/back.4bpp.smol");
-    //const u16 gMonPalette_Wingblown[] = INCBIN_U16("graphics/pokemon/wingblown/normal.pal");
+    const u32 gMonFrontPic_Wingblown[] = INCBIN_U32("graphics/pokemon/wingblown/front.4bpp.smol");
+    const u32 gMonBackPic_Wingblown[] = INCBIN_U32("graphics/pokemon/wingblown/back.4bpp.smol");
+    const u16 gMonPalette_Wingblown[] = INCBIN_U16("graphics/pokemon/wingblown/normal.gbapal");
     //const u16 gMonShinyPalette_Wingblown[] = INCBIN_U16("graphics/pokemon/wingblown/shiny.pal");
     //const u8 gMonIcon_Wingblown[] = INCBIN_U8("graphics/pokemon/wingblown/icon.4bpp");
     //const u8 gMonFootprint_Wingblown[] = INCBIN_U8("graphics/pokemon/wingblown/footprint.1bpp");
 
-    //const u32 gMonFrontPic_Grimkeeper[] = INCBIN_U32("graphics/pokemon/grimkeeper/anim_front.4bpp.smol");
-    //const u32 gMonBackPic_Grimkeeper[] = INCBIN_U32("graphics/pokemon/grimkeeper/back.4bpp.smol");
-    //const u16 gMonPalette_Grimkeeper[] = INCBIN_U16("graphics/pokemon/grimkeeper/normal.pal");
+    const u32 gMonFrontPic_Grimkeeper[] = INCBIN_U32("graphics/pokemon/grimkeeper/front.4bpp.smol");
+    const u32 gMonBackPic_Grimkeeper[] = INCBIN_U32("graphics/pokemon/grimkeeper/back.4bpp.smol");
+    const u16 gMonPalette_Grimkeeper[] = INCBIN_U16("graphics/pokemon/grimkeeper/normal.gbapal");
     //const u16 gMonShinyPalette_Grimkeeper[] = INCBIN_U16("graphics/pokemon/grimkeeper/shiny.pal");
     //const u8 gMonIcon_Grimkeeper[] = INCBIN_U8("graphics/pokemon/grimkeeper/icon.4bpp");
     //const u8 gMonFootprint_Grimkeeper[] = INCBIN_U8("graphics/pokemon/grimkeeper/footprint.1bpp");
