@@ -296,6 +296,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Treecko,
         .iconSprite = gMonIcon_Treecko,
         .iconPalIndex = 1,
+        SHADOW(0, -4, SHADOW_SIZE_S)
         //FOOTPRINT(Puckling)
         FOOTPRINT(Treecko)
         .levelUpLearnset = sPucklingLevelUpLearnset,
@@ -355,6 +356,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Grovyle,
         .iconSprite = gMonIcon_Grovyle,
         .iconPalIndex = 1,
+        //SHADOW(1, -1, SHADOW_SIZE_S)
         //FOOTPRINT(Wingblown)
         FOOTPRINT(Grovyle)
         .levelUpLearnset = sWingblownLevelUpLearnset,
@@ -414,6 +416,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_Sceptile,
         .iconSprite = gMonIcon_Sceptile,
         .iconPalIndex = 1,
+        //SHADOW(1, -1, SHADOW_SIZE_S)
         //FOOTPRINT(Grimkeeper)
         FOOTPRINT(Sceptile)
         .levelUpLearnset = sGrimkeeperLevelUpLearnset,
