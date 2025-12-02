@@ -363,8 +363,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Wingblown,
         .iconPalIndex = 4,
         SHADOW(0, 5, SHADOW_SIZE_L)
-        //TODO: FOOT
-        FOOTPRINT(Grovyle)
+        FOOTPRINT(Noibat)
         .levelUpLearnset = sWingblownLevelUpLearnset,
         .teachableLearnset = sWingblownTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_GRIMKEEPER}),
@@ -426,8 +425,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Grimkeeper,
         .iconPalIndex = 5,
         SHADOW(0, 12, SHADOW_SIZE_XL_BATTLE_ONLY)
-        //TODO: FOOT
-        FOOTPRINT(Sceptile)
+        FOOTPRINT(Floatzel)
         .levelUpLearnset = sGrimkeeperLevelUpLearnset,
         .teachableLearnset = sGrimkeeperTeachableLearnset,
     },
