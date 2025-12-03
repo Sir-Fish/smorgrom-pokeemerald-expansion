@@ -1667,8 +1667,10 @@
 #define SPECIES_PUCKLING                                1550
 #define SPECIES_WINGBLOWN                               1551
 #define SPECIES_GRIMKEEPER                              1552
+#define SPECIES_CLICKITTY                               1553
+#define SPECIES_FELINUX                                 1554
 
-#define SPECIES_EGG                                     (SPECIES_GRIMKEEPER + 1)
+#define SPECIES_EGG                                     (SPECIES_FELINUX + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

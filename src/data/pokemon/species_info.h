@@ -302,7 +302,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Puckling,
         .iconPalIndex = 4,
         SHADOW(-1, 3, SHADOW_SIZE_S)
-        FOOTPRINT(Ditto)
+        FOOTPRINT(Shelgon)
         .levelUpLearnset = sPucklingLevelUpLearnset,
         .teachableLearnset = sPucklingTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_WINGBLOWN}),
@@ -430,4 +430,125 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sGrimkeeperTeachableLearnset,
     },
     
+[SPECIES_CLICKITTY] =
+    {
+        .baseHP        = 64,
+        .baseAttack    = 32,
+        .baseDefense   = 32,
+        .baseSpeed     = 64,
+        .baseSpAttack  = 64,
+        .baseSpDefense = 32,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        //TODO
+        .catchRate = 255,
+        .expYield = 50,
+        .evYield_SpAttack = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_DOWNLOAD },
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Clickitty"),
+        .cryId = CRY_PURRLOIN,
+        .natDexNum = NATIONAL_DEX_CLICKITTY,
+        .categoryName = _("Matieu"),
+        .height = 4,
+        .weight = 64,
+        .description = COMPOUND_STRING(
+            "This Smorgmon is commonly found by\n"
+            "junk, finding electronics to plug\n"
+            "its wire-like tail into. It's body\n"
+            "expands and contracts accordingly."),
+        .pokemonScale = 420,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Clickitty,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 7,
+        .frontAnimId = ANIM_H_STRETCH,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 6),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 6),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 3),
+        ),
+        .backPic = gMonBackPic_Clickitty,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_DIP_RIGHT_SIDE,
+        .palette = gMonPalette_Clickitty,
+        .shinyPalette = gMonShinyPalette_Clickitty,
+        .iconSprite = gMonIcon_Clickitty,
+        .iconPalIndex = 5,
+        SHADOW(0, 1, SHADOW_SIZE_M)
+        FOOTPRINT(Purrloin)
+        .levelUpLearnset = sClickittyLevelUpLearnset,
+        .teachableLearnset = sClickittyTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_UPGRADE, SPECIES_FELINUX}),
+    },
+
+    [SPECIES_FELINUX] =
+    {
+        .baseHP        = 64,
+        .baseAttack    = 32,
+        .baseDefense   = 128,
+        .baseSpeed     = 64,
+        .baseSpAttack  = 128,
+        .baseSpDefense = 64,
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_STEEL),
+        //TODO
+        .catchRate = 255,
+        .expYield = 150,
+        .evYield_SpAttack = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_DISGUISE, ABILITY_NONE, ABILITY_DOWNLOAD },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Felinux"),
+        .cryId = CRY_JOLTEON,
+        .natDexNum = NATIONAL_DEX_FELINUX,
+        .categoryName = _("Matieu"),
+        .height = 8,
+        .weight = 128,
+        .description = COMPOUND_STRING(
+            "By plugging its tail into an old\n"
+            "database of games, Felinux's\n"
+            "intelligence increases explosively\n"
+            "at the cost of its size."),
+        .pokemonScale = 360,
+        .pokemonOffset = 15,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Felinux,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimId = ANIM_GLOW_YELLOW,
+        .backPic = gMonBackPic_Felinux,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_SHAKE_FLASH_YELLOW,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 6),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 6),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 3),
+        ),
+        .palette = gMonPalette_Felinux,
+        .shinyPalette = gMonShinyPalette_Felinux,
+        .iconSprite = gMonIcon_Felinux,
+        .iconPalIndex = 3,
+        SHADOW(0, -1, SHADOW_SIZE_S)
+        FOOTPRINT(Jolteon)
+        .levelUpLearnset = sFelinuxLevelUpLearnset,
+        .teachableLearnset = sFelinuxTeachableLearnset,
+    },
+
 };

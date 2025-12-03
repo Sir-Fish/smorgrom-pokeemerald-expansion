@@ -26753,3 +26753,15 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Grimkeeper[] = INCBIN_U16("graphics/pokemon/grimkeeper/normal.gbapal");
     const u16 gMonShinyPalette_Grimkeeper[] = INCBIN_U16("graphics/pokemon/grimkeeper/shiny.gbapal");
     const u8 gMonIcon_Grimkeeper[] = INCBIN_U8("graphics/pokemon/grimkeeper/icon.4bpp");
+
+    const u32 gMonFrontPic_Clickitty[] = INCBIN_U32("graphics/pokemon/clickitty/anim_front.4bpp.smol");
+    const u32 gMonBackPic_Clickitty[] = INCBIN_U32("graphics/pokemon/clickitty/back.4bpp.smol");
+    const u16 gMonPalette_Clickitty[] = INCBIN_U16("graphics/pokemon/clickitty/normal.gbapal");
+    const u16 gMonShinyPalette_Clickitty[] = INCBIN_U16("graphics/pokemon/clickitty/shiny.gbapal");
+    const u8 gMonIcon_Clickitty[] = INCBIN_U8("graphics/pokemon/clickitty/icon.4bpp");
+
+    const u32 gMonFrontPic_Felinux[] = INCBIN_U32("graphics/pokemon/felinux/anim_front.4bpp.smol");
+    const u32 gMonBackPic_Felinux[] = INCBIN_U32("graphics/pokemon/felinux/back.4bpp.smol");
+    const u16 gMonPalette_Felinux[] = INCBIN_U16("graphics/pokemon/felinux/normal.gbapal");
+    const u16 gMonShinyPalette_Felinux[] = INCBIN_U16("graphics/pokemon/felinux/shiny.gbapal");
+    const u8 gMonIcon_Felinux[] = INCBIN_U8("graphics/pokemon/felinux/icon.4bpp");
