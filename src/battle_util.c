@@ -11212,3 +11212,8 @@ bool32 IsMimikyuDisguised(u32 battler)
     return gBattleMons[battler].species == SPECIES_MIMIKYU_DISGUISED
         || gBattleMons[battler].species == SPECIES_MIMIKYU_TOTEM_DISGUISED;
 }
+
+bool32 IsFelinuxDisguised(u32 battler)
+{
+    return gBattleMons[battler].species == SPECIES_FELINUX_DISGUISED;
+}

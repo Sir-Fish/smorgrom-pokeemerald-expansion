@@ -1918,6 +1918,8 @@ static u32 GetSwitchinHitsToKO(s32 damageTaken, u32 battler)
     }
 
     // Disguise will always add an extra hit to KO
+    if (!opponentCanBreakMold && gAiLogicData->switchinCandidate.battleMon.species == SPECIES_FELINUX_DISGUISED)
+        hitsToKO++;
     if (!opponentCanBreakMold && gAiLogicData->switchinCandidate.battleMon.species == SPECIES_MIMIKYU_DISGUISED)
         hitsToKO++;
 

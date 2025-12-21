@@ -491,7 +491,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_UPGRADE, SPECIES_FELINUX}),
     },
 
-    [SPECIES_FELINUX] =
+    [SPECIES_FELINUX_DISGUISED] =
     {
         .baseHP        = 64,
         .baseAttack    = 32,
@@ -526,11 +526,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .pokemonOffset = 15,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Felinux,
+        .frontPic = gMonFrontPic_FelinuxDisguised,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimId = ANIM_GLOW_YELLOW,
-        .backPic = gMonBackPic_Felinux,
+        .backPic = gMonBackPic_FelinuxDisguised,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_SHAKE_FLASH_YELLOW,
@@ -541,14 +541,78 @@ const struct SpeciesInfo gSpeciesInfo[] =
             ANIMCMD_FRAME(1, 15),
             ANIMCMD_FRAME(0, 3),
         ),
-        .palette = gMonPalette_Felinux,
-        .shinyPalette = gMonShinyPalette_Felinux,
-        .iconSprite = gMonIcon_Felinux,
+        .palette = gMonPalette_FelinuxDisguised,
+        .shinyPalette = gMonShinyPalette_FelinuxDisguised,
+        .iconSprite = gMonIcon_FelinuxDisguised,
         .iconPalIndex = 3,
         SHADOW(0, -1, SHADOW_SIZE_S)
         FOOTPRINT(Jolteon)
         .levelUpLearnset = sFelinuxLevelUpLearnset,
         .teachableLearnset = sFelinuxTeachableLearnset,
+        .formSpeciesIdTable = sFelinuxFormSpeciesIdTable,
+        .formChangeTable = sFelinuxFormChangeTable,
+    },
+
+    [SPECIES_FELINUX_BUSTED] =
+    {
+        .baseHP        = 64,
+        .baseAttack    = 32,
+        .baseDefense   = 128,
+        .baseSpeed     = 64,
+        .baseSpAttack  = 128,
+        .baseSpDefense = 64,
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_STEEL),
+        //TODO
+        .catchRate = 255,
+        .expYield = 150,
+        .evYield_SpAttack = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_DISGUISE, ABILITY_NONE, ABILITY_DOWNLOAD },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Felinux"),
+        .cryId = CRY_JOLTEON,
+        .natDexNum = NATIONAL_DEX_FELINUX,
+        .categoryName = _("Matieu"),
+        .height = 8,
+        .weight = 128,
+        .description = COMPOUND_STRING(
+            "By plugging its tail into an old\n"
+            "database of games, Felinux's\n"
+            "intelligence increases explosively\n"
+            "at the cost of its size."),
+        .pokemonScale = 360,
+        .pokemonOffset = 15,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_FelinuxBusted,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimId = ANIM_GLOW_YELLOW,
+        .backPic = gMonBackPic_FelinuxBusted,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_SHAKE_FLASH_YELLOW,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 6),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 6),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 3),
+        ),
+        .palette = gMonPalette_FelinuxBusted,
+        .shinyPalette = gMonShinyPalette_FelinuxBusted,
+        .iconSprite = gMonIcon_FelinuxBusted,
+        .iconPalIndex = 3,
+        SHADOW(0, -1, SHADOW_SIZE_S)
+        FOOTPRINT(Jolteon)
+        .levelUpLearnset = sFelinuxLevelUpLearnset,
+        .teachableLearnset = sFelinuxTeachableLearnset,
+        .formSpeciesIdTable = sFelinuxFormSpeciesIdTable,
+        .formChangeTable = sFelinuxFormChangeTable,
     },
 
 };

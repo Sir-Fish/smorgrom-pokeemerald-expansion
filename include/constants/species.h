@@ -1668,9 +1668,11 @@
 #define SPECIES_WINGBLOWN                               1551
 #define SPECIES_GRIMKEEPER                              1552
 #define SPECIES_CLICKITTY                               1553
-#define SPECIES_FELINUX                                 1554
+#define SPECIES_FELINUX                                 SPECIES_FELINUX_DISGUISED
+#define SPECIES_FELINUX_DISGUISED                       1554
+#define SPECIES_FELINUX_BUSTED                          1555
 
-#define SPECIES_EGG                                     (SPECIES_FELINUX + 1)
+#define SPECIES_EGG                                     (SPECIES_FELINUX_BUSTED + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

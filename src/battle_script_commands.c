@@ -2017,6 +2017,8 @@ static inline bool32 DoesBattlerNegateDamage(u32 battler)
         return FALSE;
     if (ability == ABILITY_DISGUISE && species == SPECIES_MIMIKYU)
         return TRUE;
+    if (ability == ABILITY_DISGUISE && species == SPECIES_FELINUX)
+        return TRUE;
     if (ability == ABILITY_ICE_FACE && species == SPECIES_EISCUE && GetBattleMoveCategory(gCurrentMove) == DAMAGE_CATEGORY_PHYSICAL)
         return TRUE;
 
@@ -2388,7 +2390,8 @@ static void MoveDamageDataHpUpdate(u32 battler, u32 scriptBattler, const u8 *nex
         if (gBattleMons[battler].species == SPECIES_MIMIKYU_TOTEM_DISGUISED)
             gBattleMons[battler].species = SPECIES_MIMIKYU_BUSTED_TOTEM;
         else
-            gBattleMons[battler].species = SPECIES_MIMIKYU_BUSTED;
+            gBattleMons[battler].species = SPECIES_FELINUX_BUSTED;
+            //gBattleMons[battler].species = SPECIES_MIMIKYU_BUSTED;
         if (GetGenConfig(GEN_CONFIG_DISGUISE_HP_LOSS) >= GEN_8)
             SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
         BattleScriptPush(nextInstr);
@@ -5374,7 +5377,8 @@ static void Cmd_isdmgblockedbydisguise(void)
 {
     CMD_ARGS();
 
-    if (!IsMimikyuDisguised(gBattlerAttacker)
+    if (!IsFelinuxDisguised(gBattlerAttacker)
+    //if (!IsMimikyuDisguised(gBattlerAttacker)
      || gBattleMons[gBattlerAttacker].volatiles.transformed
      || !IsAbilityAndRecord(gBattlerAttacker, GetBattlerAbility(gBattlerAttacker), ABILITY_DISGUISE))
     {
@@ -5388,7 +5392,8 @@ static void Cmd_isdmgblockedbydisguise(void)
     if (gBattleMons[gBattlerAttacker].species == SPECIES_MIMIKYU_TOTEM_DISGUISED)
         gBattleMons[gBattlerAttacker].species = SPECIES_MIMIKYU_BUSTED_TOTEM;
     else
-        gBattleMons[gBattlerAttacker].species = SPECIES_MIMIKYU_BUSTED;
+        gBattleMons[gBattlerAttacker].species = SPECIES_FELINUX_BUSTED;
+        //gBattleMons[gBattlerAttacker].species = SPECIES_MIMIKYU_BUSTED;
     if (GetGenConfig(GEN_CONFIG_DISGUISE_HP_LOSS) >= GEN_8)
         SetPassiveDamageAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker) / 8);
     BattleScriptPush(BattleScript_MoveEnd);
@@ -13355,7 +13360,8 @@ bool32 DoesSubstituteBlockMove(u32 battlerAtk, u32 battlerDef, u32 move)
 
 bool32 DoesDisguiseBlockMove(u32 battler, u32 move)
 {
-    if (!IsMimikyuDisguised(battler)
+    if (!IsFelinuxDisguised(battler)
+    //if (!IsMimikyuDisguised(battler)
      || gBattleMons[battler].volatiles.transformed
      || (!gProtectStructs[battler].confusionSelfDmg && IsBattleMoveStatus(move))
      || !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_DISGUISE))
