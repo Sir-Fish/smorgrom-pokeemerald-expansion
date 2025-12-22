@@ -2432,3 +2432,9 @@ static const u16 sTerapagosFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_TERAPAGOS
+
+static const u16 sFelinuxFormSpeciesIdTable[] = {
+    SPECIES_FELINUX_DISGUISED,
+    SPECIES_FELINUX_BUSTED,
+    FORM_SPECIES_END,
+};

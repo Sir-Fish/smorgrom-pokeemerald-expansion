@@ -1547,5 +1547,11 @@ static const struct FormChange sTerapagosFormChangeTable[] = {
 };
 #endif //P_FAMILY_TERAPAGOS
 
+static const struct FormChange sFelinuxFormChangeTable[] = {
+    {FORM_CHANGE_FAINT,         SPECIES_FELINUX_DISGUISED},
+    {FORM_CHANGE_END_BATTLE,    SPECIES_FELINUX_DISGUISED},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN

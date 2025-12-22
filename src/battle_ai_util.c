@@ -1473,6 +1473,8 @@ bool32 CanEndureHit(u32 battler, u32 battlerTarget, u32 move)
             return TRUE;
         if (IsMimikyuDisguised(battlerTarget))
             return TRUE;
+        if (IsFelinuxDisguised(battlerTarget))
+            return TRUE;
     }
 
     return FALSE;
