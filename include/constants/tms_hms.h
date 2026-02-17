@@ -2,16 +2,16 @@
 #define GUARD_CONSTANTS_TMS_HMS_H
 
 #define FOREACH_TM(F) \
-    F(FOCUS_PUNCH) \
+    F(WORK_UP) \
     F(DRAGON_CLAW) \
     F(WATER_PULSE) \
     F(CALM_MIND) \
     F(ROAR) \
     F(TOXIC) \
-    F(HAIL) \
+    F(SNOWSCAPE) \
     F(BULK_UP) \
     F(BULLET_SEED) \
-    F(HIDDEN_POWER) \
+    F(ECHOED_VOICE) \
     F(SUNNY_DAY) \
     F(TAUNT) \
     F(ICE_BEAM) \
@@ -21,37 +21,87 @@
     F(PROTECT) \
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
-    F(SAFEGUARD) \
-    F(FRUSTRATION) \
+    F(PIN_MISSILE) \
+    F(HELPING_HAND) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
     F(THUNDERBOLT) \
     F(THUNDER) \
     F(EARTHQUAKE) \
-    F(RETURN) \
+    F(CHARM) \
     F(DIG) \
     F(PSYCHIC) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \
     F(DOUBLE_TEAM) \
     F(REFLECT) \
-    F(SHOCK_WAVE) \
+    F(AIR_SLASH) \
     F(FLAMETHROWER) \
     F(SLUDGE_BOMB) \
     F(SANDSTORM) \
     F(FIRE_BLAST) \
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \
-    F(TORMENT) \
+    F(DRAGON_TAIL) \
     F(FACADE) \
-    F(SECRET_POWER) \
+    F(LIQUIDATION) \
     F(REST) \
     F(ATTRACT) \
     F(THIEF) \
     F(STEEL_WING) \
-    F(SKILL_SWAP) \
-    F(SNATCH) \
-    F(OVERHEAT)
+    F(IMPRISON) \
+    F(ALLURING_VOICE) \
+    F(OVERHEAT) \
+    F(ROOST) \
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(BRINE) \
+    F(DRAINING_KISS) \
+    F(CHARGE_BEAM) \
+    F(DRAGON_PULSE) \
+    F(ENDURE) \
+    F(DRAIN_PUNCH) \
+    F(WILL_O_WISP) \
+    F(SILVER_WIND) \
+    F(LOW_SWEEP) \
+    F(BODY_SLAM) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(DEFOG) \
+    F(GIGA_IMPACT) \
+    F(ROCK_POLISH) \
+    F(VENOSHOCK) \
+    F(STONE_EDGE) \
+    F(AVALANCHE) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(STEALTH_ROCK) \
+    F(RETALIATE) \
+    F(TRICK) \
+    F(DARK_PULSE) \
+    F(ROCK_SLIDE) \
+    F(X_SCISSOR) \
+    F(SLEEP_TALK) \
+    F(PLAY_ROUGH) \
+    F(POISON_JAB) \
+    F(VOLT_SWITCH) \
+    F(GRASS_KNOT) \
+    F(BUG_BUZZ) \
+    F(DAZZLING_GLEAM) \
+    F(U_TURN) \
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(TRICK_ROOM) \
+    F(ACROBATICS) \
+    F(ZEN_HEADBUTT) \
+    F(TRAILBLAZE) \
+    F(TEMPER_FLARE) \
+    F(STUFF_CHEEKS) \
+    F(INFESTATION) \
+    F(WISH) \
+    F(WILD_CHARGE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
