@@ -19,7 +19,7 @@ AI_DOUBLE_BATTLE_TEST("AI uses Final Gambit")
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, MOVE_FINAL_GAMBIT); SEND_OUT(playerLeft, 2); }
+        TURN { EXPECT_MOVE(opponentLeft, MOVE_FINAL_GAMBIT); SEND_OUT(playerLeft, 2); }
     }
 }
 
@@ -35,7 +35,7 @@ AI_DOUBLE_BATTLE_TEST("AI uses Guillotine")
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, MOVE_GUILLOTINE); SEND_OUT(playerLeft, 2); }
+        TURN { EXPECT_MOVE(opponentLeft, MOVE_GUILLOTINE); SEND_OUT(playerLeft, 2); }
     }
 }
 
@@ -51,7 +51,7 @@ AI_DOUBLE_BATTLE_TEST("AI uses Sheer Cold")
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, MOVE_SHEER_COLD); SEND_OUT(playerLeft, 2); }
+        TURN { EXPECT_MOVE(opponentLeft, MOVE_SHEER_COLD); SEND_OUT(playerLeft, 2); }
     }
 }
 
@@ -113,7 +113,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 1-100")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -189,7 +189,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 101-200")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -278,7 +278,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 201-300")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -314,8 +314,8 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 301-400")
         case EFFECT_COPYCAT:
         case EFFECT_LAST_RESORT:
         case EFFECT_AQUA_RING:
-        case EFFECT_GRAVITY:
         case EFFECT_HEALING_WISH:
+        case EFFECT_LUNAR_DANCE:
 
         //TODO: AI TESTS
         case EFFECT_RESTORE_HP:
@@ -328,6 +328,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 301-400")
         case EFFECT_MAGNET_RISE:
 
         // tests exist elsewhere
+        case EFFECT_GRAVITY:
         case EFFECT_HEAL_BELL:
         case EFFECT_ATTACK_UP_USER_ALLY:
 
@@ -354,7 +355,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 301-400")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -383,6 +384,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 401-500")
         {
         //TODO: AI HANDLING
         case EFFECT_HEALING_WISH:
+        case EFFECT_LUNAR_DANCE:
         case EFFECT_WONDER_ROOM:
         case EFFECT_FOLLOW_ME:
         case EFFECT_MAGIC_ROOM:
@@ -421,7 +423,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 401-500")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -458,7 +460,6 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 501-600")
         case EFFECT_ION_DELUGE:
         case EFFECT_AROMATIC_MIST:
         case EFFECT_POWDER:
-        case EFFECT_FLOWER_SHIELD:
         case EFFECT_ELECTRIFY:
 
         //TODO: AI TESTS
@@ -469,6 +470,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 501-600")
         case EFFECT_FAIRY_LOCK:
 
         // tests exist elsewhere
+        case EFFECT_FLOWER_SHIELD:
         case EFFECT_ROTOTILLER:
         case EFFECT_GRASSY_TERRAIN:
         case EFFECT_MISTY_TERRAIN:
@@ -496,7 +498,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 501-600")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -524,8 +526,6 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 601-700")
         switch (effect)
         {
         //TODO: AI HANDLING
-        case EFFECT_MAGNETIC_FLUX:
-        case EFFECT_GEAR_UP:
         case EFFECT_FAIL_IF_NOT_ARG_TYPE:
         case EFFECT_STUFF_CHEEKS:
         case EFFECT_NO_RETREAT:
@@ -544,6 +544,8 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 601-700")
         case EFFECT_ELECTRIC_TERRAIN:
         case EFFECT_PSYCHIC_TERRAIN:
         case EFFECT_AURORA_VEIL:
+        case EFFECT_GEAR_UP:
+        case EFFECT_MAGNETIC_FLUX:
 
         // Skipped on purpose.
         case EFFECT_PROTECT:
@@ -568,7 +570,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 601-700")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -597,7 +599,6 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 701-800")
         {
         //TODO: AI HANDLING
         case EFFECT_CLANGOROUS_SOUL:
-        case EFFECT_LIFE_DEW:
         case EFFECT_POLTERGEIST:
         case EFFECT_COACHING:
         case EFFECT_REVIVAL_BLESSING:
@@ -613,6 +614,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 701-800")
         // tests exist elsewhere
         case EFFECT_COURT_CHANGE:
         case EFFECT_DOODLE:
+        case EFFECT_LIFE_DEW:
 
         // Skipped on purpose.
         case EFFECT_PROTECT:
@@ -637,7 +639,7 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 701-800")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }
 
@@ -699,6 +701,6 @@ AI_DOUBLE_BATTLE_TEST("AI can use all moves, 801-900")
         OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_BURN); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN {  EXPECT_MOVE(opponentLeft, move); }
+        TURN { EXPECT_MOVE(opponentLeft, move); }
     }
 }

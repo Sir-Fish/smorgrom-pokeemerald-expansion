@@ -137,13 +137,14 @@ SINGLE_BATTLE_TEST("(Gulp Missile) triggers even if the user is fainted by oppos
 
 SINGLE_BATTLE_TEST("(Gulp Missile) Transformed Cramorant Gulping lowers defense but is prevented by stat reduction preventing abilities")
 {
-    u32 species, ability;
+    u32 species;
+    enum Ability ability;
     PARAMETRIZE { species = SPECIES_METAGROSS; ability = ABILITY_CLEAR_BODY; }
     PARAMETRIZE { species = SPECIES_CORVIKNIGHT; ability = ABILITY_MIRROR_ARMOR; }
     PARAMETRIZE { species = SPECIES_CHATOT; ability = ABILITY_BIG_PECKS; }
     GIVEN {
         PLAYER(SPECIES_CRAMORANT) { Ability(ABILITY_GULP_MISSILE); }
-        OPPONENT(species) { Ability(ability); }
+        OPPONENT(species) { Ability(ability); HP(9999); MaxHP(9999); } // In Gen 5 data, Surf would be enough to knock out Chatot
     } WHEN {
         TURN { MOVE(player, MOVE_SURF); MOVE(opponent, MOVE_SCRATCH); }
     } SCENE {
@@ -163,7 +164,7 @@ SINGLE_BATTLE_TEST("(Gulp Missile) Transformed Cramorant Gulping lowers defense 
 SINGLE_BATTLE_TEST("(Gulp Missile) Transformed Cramorant Gulping lowers defense and still triggers other effects after")
 {
     // Make sure attacker and target are correct after triggering the ability
-    u32 ability;
+    enum Ability ability;
     PARAMETRIZE { ability = ABILITY_INFILTRATOR; }
     PARAMETRIZE { ability = ABILITY_CLEAR_BODY; }
     GIVEN {
@@ -198,5 +199,32 @@ SINGLE_BATTLE_TEST("Gulp Missile triggered by explosion doesn't freeze the game"
         OPPONENT(SPECIES_CRAMORANT);
     } WHEN {
         TURN { MOVE(opponent, MOVE_SURF); MOVE(player, MOVE_EXPLOSION); }
+    }
+}
+
+SINGLE_BATTLE_TEST("(Gulp Missile) Cramorant in Gorging damages an electric type without paralysing")
+{
+    GIVEN {
+        PLAYER(SPECIES_CRAMORANT) { HP(120); MaxHP(250); Ability(ABILITY_GULP_MISSILE); }
+        OPPONENT(SPECIES_EELEKTROSS);
+    } WHEN {
+        TURN { MOVE(player, MOVE_SURF); MOVE(opponent, MOVE_SCRATCH); }
+        TURN { MOVE(player, MOVE_SCRATCH); MOVE(opponent, MOVE_SCRATCH); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SURF, player);
+        HP_BAR(opponent);
+        ABILITY_POPUP(player, ABILITY_GULP_MISSILE);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SCRATCH, opponent);
+        HP_BAR(player);
+        ABILITY_POPUP(player, ABILITY_GULP_MISSILE);
+        HP_BAR(opponent);
+        NONE_OF {
+            ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PRZ, opponent);
+            STATUS_ICON(opponent, paralysis: TRUE);
+        }
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SCRATCH, player);
+        HP_BAR(opponent);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SCRATCH, opponent);
+        HP_BAR(player);
     }
 }

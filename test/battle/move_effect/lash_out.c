@@ -118,7 +118,7 @@ SINGLE_BATTLE_TEST("Lash Out damage is boosted on turn 1 by switch in abilities"
 DOUBLE_BATTLE_TEST("Lash Out damage is boosted by Cotton Down activation in doubles")
 {
     s16 damage[2] = {0};
-    u32 ability = ABILITY_NONE;
+    enum Ability ability = ABILITY_NONE;
 
     PARAMETRIZE { ability = ABILITY_REGENERATOR; }
     PARAMETRIZE { ability = ABILITY_COTTON_DOWN; }
@@ -161,7 +161,7 @@ DOUBLE_BATTLE_TEST("Lash Out damage is not boosted by Treasure of Ruin ability a
 
     GIVEN {
         PLAYER(SPECIES_GRIMMSNARL)  { Moves(MOVE_LASH_OUT); }
-        PLAYER(SPECIES_RATTATA); 
+        PLAYER(SPECIES_RATTATA);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_GOLEM);
         OPPONENT(species)  { Ability(ability); }
